@@ -22,7 +22,7 @@ var genSignature=function(appSecret,paramsJson){
     }
     var str = paramStr.substr(0, paramStr.length - 1);
 	str+=appSecret;
-	return crypto.createHash('sha1').update(str,"UTF-8").digest('hex');//MD5加密工具
+	return crypto.createHash('sha1').update(str,"UTF-8").digest('hex');
 };
 //发送post请求
 var sendHttpRequest=function(url,type,data,callback){
